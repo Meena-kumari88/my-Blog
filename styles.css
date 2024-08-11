@@ -43,28 +43,39 @@
     
     /* Ensure the carousel is below the navbar */
     body {
-        padding-top: 70px; /* Adjust this value based on your navbar height */
-
-    }
-    body::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: url("https://img.freepik.com/free-vector/glossy-green-color-modern-polygonal-shapes-background_1055-21145.jpg?uid=R158582796&ga=GA1.1.633534688.1708099222&semt=ais_hybrid");
-        background-size: cover;
-        filter: blur(10px); /* Adjust the blur radius as needed */
-        z-index: -1;
+        padding-top: 70px; 
     }
     
     /* Make carousel responsive */
     @media (max-width: 767.98px) {
         #carouselExample {
-            width: 100%; /* Full width on small screens */
-            margin-top: 10px; /* Adjust margin for smaller screens if needed */
+            width: 100%;
+            margin-top: 40px;
         }
+    
+        
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .carousel-caption {
+        position: relative; /* Ensure caption is part of the normal document flow */
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+        color: #fff; /* White text */
+        padding: 10px;
+        width: 100%;
+        bottom: 0;
+        text-align: center;
+        margin-top: 10px; /* Ensure space between image and caption */
+    }
+    
+    .carousel-item {
+        display: flex;
+        flex-direction: column; /* Make caption follow image in a column layout */
+        align-items: center; /* Center the content */
+    }
     }
     
     /* Wrapper for consistent aspect ratio */
@@ -72,16 +83,205 @@
         position: relative;
         width: 100%;
         padding-top: 56.25%; /* 16:9 aspect ratio; adjust as needed */
-        overflow: hidden;
     }
     
-    /* Ensure images fit within the wrapper */
+    /* Apply blur effect to images */
     .carousel-item img {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        object-fit: contain; /* Ensure the image fits within the wrapper without cropping */
+        object-fit: cover; /* Ensure the image covers the area */
+        filter: blur(0.5px); /* Apply blur effect; adjust value as needed */
     }
     
+    /* Ensure image caption is above blurred image */
+    .carousel-caption {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        z-index: 2; /* Ensure the caption is above the image */
+        color: #fff; /* Ensure text is visible */
+        background: rgba(0, 0, 0, 0.5); /* Optional: add a semi-transparent background for better readability */
+        padding: 10px;
+    }
+    
+    /* Remove underline from "Read More" links and set text color */
+    .carousel-caption a {
+        color: #fff; /* Set link color to match caption text */
+        text-decoration: none; /* Remove underline */
+    }
+    
+    .carousel-caption a:hover {
+        text-decoration: underline; /* Optional: underline on hover for better UX */
+    }
+
+
+    /*************** Recent Page******************/
+
+    .recent-section {
+        text-align: center;
+        padding: 20px;
+        background-image: url("https://example.com/your-background-image.jpg"); /* Replace with your desired background image URL */
+        background-size: cover;
+      }
+      h2{
+        font-size: 30px;
+      }
+      
+      h1 {
+         font-size: 60px;
+        font-weight: 700; /* Increased font weight */
+        color: white;
+        margin-bottom: 20px;
+        font-family: 'Arial Black', sans-serif; /* A bolder font style */
+        transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+      }
+      
+      h2:hover {
+        transform: scale(1.1); /* Zoom in on hover */
+      }
+      
+      .card-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+        column-gap: 15px; /* Moderate gap between columns */
+        row-gap: 20px;    /* Moderate gap between rows */
+        justify-items: center;
+        padding: 0 10px;  /* Reduced padding on the sides */
+        width: 75%; /* Slightly increased container width */
+        margin: 0 auto; /* Center the container */
+      }
+      
+      .card {
+        background-color: #fff;
+        border: 2px solid #000; /* Thinner black border */
+        border-radius: 8px; /* Slightly rounded corners */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+        text-align: center;
+        transition: transform 0.3s;
+        overflow: hidden;
+      }
+      
+      .card:hover {
+        transform: translateY(-8px);
+      }
+      
+      .card img {
+        width: 100%;
+        height: 200px; /* Adjusted height for better image visibility */
+        object-fit: cover; /* Ensure the image covers the area without distortion */
+        border-radius: 8px 8px 0 0; /* Rounded corners for the image */
+      }
+      
+      .card h3 {
+        font-size: 22px; /* Adjusted font size for the title */
+        color: #333;
+        margin: 10px 0 8px;
+        font-weight: bold; /* Increased font weight */
+      }
+      
+      .card p {
+        font-size: 14px; /* Smaller font size for the description */
+        color: #666;
+        line-height: 1.5;
+        padding: 10px; /* Added padding for the description */
+        font-weight: normal; /* Normal font weight */
+      }
+      
+      .card .see-more {
+        display: inline-block;
+        padding: 6px 12px; /* Slightly increased padding for the button */
+        background-color: #000; /* Black background */
+        color: #fff; /* White text */
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+        border: 1px solid #000; /* Thin black border */
+        border-radius: 10px;
+        transition: background-color 0.3s, transform 0.3s;
+        width: fit-content; /* Adjust width to fit content */
+        margin: 0 auto 20px;
+      }
+      
+      .card .see-more:hover {
+        background-color: #333;
+        transform: scale(1.05);
+      }
+      
+      /* Styles for Popular Tags */
+      .popular-tags h3 {
+        font-size: 35px; /* Increased font size */
+        font-weight: bold; /* Bold font */
+        color: #333;
+        margin-bottom: 15px;
+      }
+      
+      .popular-tags p {
+        font-size: 25px; /* Increased font size */
+        font-weight: bold; /* Bold font */
+        color: #666;
+        margin-bottom: 10px;
+      }
+      
+      /* Media Queries for Responsiveness */
+      @media (max-width: 1200px) {
+        .card-container {
+          grid-template-columns: repeat(3, 1fr); /* 3 cards per row for medium screens */
+        }
+      }
+      
+      @media (max-width: 900px) {
+        h2 {
+          font-size: 32px; /* Slightly smaller heading for smaller screens */
+        }
+      
+        .card-container {
+          grid-template-columns: repeat(2, 1fr); /* 2 cards per row for small screens */
+          width: 90%; /* Increase width to better fit content on small screens */
+        }
+      
+        .card img {
+          height: 180px; /* Adjusted height for images on smaller screens */
+        }
+      
+        .card h3 {
+          font-size: 20px; /* Slightly smaller font size for card titles */
+        }
+      
+        .card p {
+          font-size: 13px; /* Slightly smaller font size for descriptions */
+        }
+      }
+      
+      @media (max-width: 600px) {
+        h2 {
+          font-size: 28px; /* Smaller heading for mobile screens */
+        }
+      
+        .card-container {
+          grid-template-columns: 1fr; /* 1 card per row for very small screens */
+          width: 100%; /* Full width for mobile */
+        }
+      
+        .card img {
+          height: 150px; /* Further adjust image height for mobile screens */
+        }
+      
+        .card h3 {
+          font-size: 18px; /* Adjusted font size for card titles on mobile */
+        }
+      
+        .card p {
+          font-size: 12px; /* Smaller font size for descriptions on mobile */
+        }
+      }
+      
+    
+
+
+    /************************ Footer ******************************/
+
+   
