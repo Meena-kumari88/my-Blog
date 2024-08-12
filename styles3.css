@@ -284,5 +284,90 @@
 
 
     /************************ Footer ******************************/
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    footer {
+      background-color: hsla(180, 82%, 28%, 0.959);
+    }
+    .footerContainer {
+      width: 100%;
+      padding: 70px 30px 20px;
+    }
+    .socialIcons {
+      display: flex;
+      justify-content: center;
+    }
+    .socialIcons a {
+text-decoration: none;
+padding: 10px;
+background-color: white;
+margin: 10px;
+border-radius: 50%;
+display: inline-block;
+}
+
+.socialIcons a img {
+width: 30px; /* Adjust the size of your icons */
+height: 30px;
+display: block;
+}
+
+.socialIcons a:hover {
+background-color: hsla(180, 82%, 28%, 0.959);
+transition: 0.5s;
+}
+
+.socialIcons a img:hover {
+filter: invert(100%); /* This will invert the colors on hover, you can adjust as needed */
+transition: 0.5s;
+}
+
+    .footerNav {
+      margin: 30px 0;
+    }
+    .footerNav ul {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+    }
+    .footerNav ul li a {
+      color: white;
+      margin: 20px;
+      text-decoration: none;
+      font-size: 1.3em;
+      opacity: 0.7;
+      transition: 0.5s;
+    }
+    .footernavul li a:hover {
+      opacity: 1;
+    }
+    .footerBottom {
+      background-color: rgba(5, 39, 39, 0.959);
+      padding: 20px;
+      text-align: center;
+    }
+    .footerBottom p{
+      color: whitesmoke;
+    }
+    .designer{
+      opacity: 0.7;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 400px;
+      margin: 0px 5px;
+    }
+    @media (max-width: 700px) {
+        .footerNav ul{
+          flex-direction: column;
+        }
+        .footerNav ul li{
+          width: 100%;
+          text-align: center;
+          margin: 10px;
+        }
+    }
 
    
