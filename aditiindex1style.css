@@ -1,3 +1,5 @@
+
+
 /* Post Styles */
 .post {
     border: 1px solid #ddd;
@@ -41,6 +43,8 @@ button {
 button:hover {
     background: #ddd;
 }
+
+
 
 /* Like Button Styles */
 .like-button {
@@ -136,9 +140,19 @@ button:hover {
     text-decoration: none;
 }
 
+#recentPosts{
+    display: grid;
+    place-items: center; 
+    padding-left: 70px;
+    padding-right: 70px;
+    
+}
+
 .share-content a:hover {
     background-color: #f1f1f1;
 }
+
+
 
 /* Emoji Picker Styles */
 .emoji-picker-button {
@@ -194,12 +208,15 @@ background: #fafafa;
 position: relative;
 word-wrap: break-word;
 transition: background-color 0.3s ease, transform 0.3s ease;
+border: 2px solid teal;
 }
 
 .post:hover {
 background-color: #e0f7fa; /* Light teal green color */
 transform: translateY(-5px); /* Slightly raise the post */
+border: 2px solid teal;
 }
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {

@@ -1,6 +1,6 @@
 
 const postsContainer = document.getElementById('postsContainer');
-// const searchBar~ = document.getElementById('searchBar');
+// const searchBar = document.getElementById('searchBar');
 let posts = JSON.parse(localStorage.getItem('posts')) || [];
 let currentTextarea = null; // Variable to track the currently active textarea
 
