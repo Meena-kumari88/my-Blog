@@ -48,36 +48,46 @@
     }
     
     /* Make carousel responsive */
-    @media (max-width: 767.98px) {
-        #carouselExample {
-            width: 100%;
-            margin-top: 40px;
-        }
-    
-        
-    .carousel-item img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
+@media (max-width: 767.98px) {
+  #carouselExample {
+      width: 100%;
+      margin-top: 50px;
+  }
 
-    .carousel-caption {
-        position: relative; /* Ensure caption is part of the normal document flow */
-        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-        color: #fff; /* White text */
-        padding: 10px;
-        width: 100%;
-        bottom: 0;
-        text-align: center;
-        margin-top: 10px; /* Ensure space between image and caption */
-    }
-    
-    .carousel-item {
-        display: flex;
-        flex-direction: column; /* Make caption follow image in a column layout */
-        align-items: center; /* Center the content */
-    }
-    }
+  .carousel-caption {
+      display: none; /* Hide caption on small devices */
+  }
+
+  .carousel-item img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+  }
+
+  .carousel-item .mobile-button {
+      display: block; /* Show button on small devices */
+      position: relative;
+      margin: 10px auto 20px auto;
+      text-align: center;
+      
+  }
+
+  .mobile-button a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #0d0d0e;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      border: 1px solid white;
+      border-radius: 10px;
+  }
+
+  .mobile-button a:hover {
+      background-color: #14181d;
+  }
+}
+  
     
     /* Wrapper for consistent aspect ratio */
     .carousel-item {
