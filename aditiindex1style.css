@@ -1,3 +1,4 @@
+/* Base Styles (Default for large screens) */
 .post {
     border: 2px solid teal;
     margin: 20px 0;
@@ -278,6 +279,43 @@ button:hover {
     .share-content {
         width: 100%;
         padding: 8px;
+    }
+}
+
+/* Extra Small Devices (Small Phones) */
+@media (max-width: 360px) {
+    header h1 {
+        font-size: 16px;
+    }
+
+    .post {
+        padding: 6px;
+        margin: 6px 0;
+    }
+
+    .post h3 {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 12px;
+    }
+
+    .like-button,
+    .share-button,
+    .comment-button {
+        font-size: 16px;
+    }
+
+    .emoji-picker {
+        top: 70px;
+        width: 100%;
+        padding: 6px;
+    }
+
+    .share-content {
+        width: 100%;
+        padding: 6px;
     }
 }
 
