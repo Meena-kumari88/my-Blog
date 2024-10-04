@@ -32,12 +32,12 @@
     width: 80px;
   }
   .logo {
-    width: 300%; /* Adjust the size as needed */
-    height: 100%; /* Make sure width and height are equal */
-    border-radius: 100%; /* Creates a circular shape */
-    object-fit: cover; /* Ensures the image covers the entire circle */
-    display: block; /* Ensures block display */
-    margin-left: -5%; /* Centers the image horizontally if needed */
+    width: 300%; 
+    height: 100%;
+    border-radius: 100%; 
+    object-fit: cover; 
+    display: block; 
+    margin-left: -5%; 
   }
 
   nav ul {
@@ -58,17 +58,17 @@
     color: whitesmoke;
     font-weight: 600px;
     transition: color 0.5s;
-    animation: color-blink 1.5s infinite; /* Apply blinking effect */
+    animation: color-blink 1.5s infinite; 
   }
   @keyframes color-blink {
     0% {
-      color: #ffb6c1; /* Baby pink */
+      color: #ffb6c1; 
     }
     50% {
-      color: #ffffff; /* White */
+      color: #ffffff; 
     }
     100% {
-      color: #ffb6c1; /* Baby pink */
+      color: #ffb6c1; 
     }
   }
 
@@ -79,32 +79,32 @@
   .explore-button {
 text-decoration: none ;
 display: inline-block ;
-color: rgb(238, 141, 141) ; /* Initial color */
+color: rgb(238, 141, 141) ; 
 font-size: 45px;
-border: 3px solid #e3e2e2 ; /* Border color matching the text */
+border: 3px solid #e3e2e2 ; 
 padding: 14px 70px ;
 border-radius: 50px ;
 margin-top: 20px ;
-animation: light-color-blink 2s infinite ; /* Apply light color-blinking effect */
-transition: color 0.5s, border-color 0.5s ; /* Smooth transition for color and border */
+animation: light-color-blink 2s infinite ; 
+transition: color 0.5s, border-color 0.5s ; 
 }
 
 @keyframes light-color-blink {
 0% {
-    color: hsl(0, 74%, 74%); /* Light pink */
+    color: hsl(0, 74%, 74%); 
 }
 50% {
-    color: hsl(0, 66%, 94%); /* Light gray */
+    color: hsl(0, 66%, 94%); 
 }
 100% {
-    color:  hsl(0, 74%, 74%);/* Light pink */
+    color:  hsl(0, 74%, 74%);
 }
 }
 
 
 .explore-button:hover {
-border-color: #f0f0f0; /* Change border color on hover */
-color: #f0f0f0; /* Change text color on hover */
+border-color: #f0f0f0; 
+color: #f0f0f0; 
 }
 
 
@@ -120,50 +120,50 @@ color: #f0f0f0; /* Change text color on hover */
   
   @media (max-width: 768px) {
 .hero {
-    padding: 0 2%; /* Reduced padding for smaller screens */
+    padding: 0 2%; 
 }
 
 nav .logo {
-    width: 60px; /* Adjust logo size */
+    width: 60px; 
 }
 
 nav ul {
-    margin-left: 10px; /* Adjust spacing */
+    margin-left: 10px; 
 }
 
 nav ul a {
-    font-size: 14px; /* Adjust font size */
+    font-size: 14px; 
 }
 
 .content h1 {
-    font-size: 20vw; /* Larger responsive text */
+    font-size: 20vw; 
 }
 
 .explore-button {
-    font-size: 5vw; /* Larger responsive text */
-    padding: 1em 1.5em; /* Adjusted padding */
+    font-size: 5vw; 
+    padding: 1em 1.5em; 
 }
 }
 
 @media (min-width: 350) and (max-width: 480px) {
 nav .logo {
-    width: 40px; /* Further reduce logo size */
+    width: 40px; 
 }
 
 nav ul {
-    margin-left: 5px; /* Further adjusted spacing */
+    margin-left: 5px; 
 }
 
 nav ul a {
-    font-size: 12px; /* Further reduced font size */
+    font-size: 12px; 
 }
 
 .content h1 {
-    font-size: 30vw; /* Even larger responsive text */
+    font-size: 30vw; 
 }
 
 .explore-button {
-    font-size: 6vw; /* Even larger responsive text */
-    padding: 1em 1em; /* Adjusted padding */
+    font-size: 6vw; 
+    padding: 1em 1em; 
 }
 }
