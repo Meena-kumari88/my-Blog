@@ -43,7 +43,7 @@
             padding: 5px;
             font-size: 14px;
             max-width: 300px;
-            /* Limit width to prevent overflow */
+            
         }
 
         /* Main Content */
@@ -64,7 +64,6 @@
             background: #fafafa;
             position: relative;
             word-wrap: break-word;
-            /* Ensure text wraps */
         }
 
         .post h3 {
@@ -179,7 +178,6 @@
             padding: 12px 16px;
             z-index: 1;
             max-width: 200px;
-            /* Limit width to prevent overflow */
         }
 
         .share-dropdown:hover .share-content {
@@ -205,7 +203,6 @@
             cursor: pointer;
             margin-right: 10px;
             position: relative;
-            /* Make sure the picker is positioned relative to this button */
         }
 
         .emoji-picker {
@@ -217,15 +214,11 @@
             padding: 5px;
             border-radius: 5px;
             z-index: 10;
-            /* Position the picker 40px below the button */
             left: 0;
-            /* Align picker to the left edge of the button */
             width: max-content;
-            /* Adjust width to fit content */
             max-height: 200px;
-            /* Limit height to prevent overflow */
             overflow-y: auto;
-            /* Enable vertical scrolling if needed */
+           
         }
 
         .emoji-picker.show {
@@ -254,8 +247,8 @@
 }
 
 .post:hover {
-    background-color: #e0f7fa; /* Light teal green color */
-    transform: translateY(-5px); /* Slightly raise the post */
+    background-color: #e0f7fa; 
+    transform: translateY(-5px); 
 }
 
         /* Responsive Styles */
@@ -383,7 +376,7 @@
         const postsContainer = document.getElementById('postsContainer');
         const searchBar = document.getElementById('searchBar');
         let posts = JSON.parse(localStorage.getItem('posts')) || [];
-        let currentTextarea = null; // Variable to track the currently active textarea
+        let currentTextarea = null; 
 
         // Function to display posts
         function displayPosts(filteredPosts = posts) {
