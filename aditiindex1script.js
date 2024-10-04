@@ -2,7 +2,7 @@
 const postsContainer = document.getElementById('postsContainer');
 // const searchBar = document.getElementById('searchBar');
 let posts = JSON.parse(localStorage.getItem('posts')) || [];
-let currentTextarea = null; // Variable to track the currently active textarea
+let currentTextarea = null; 
 
 // Function to display posts
 function displayPosts(filteredPosts = posts) {
@@ -96,12 +96,7 @@ function addComment(event, index) {
     }
 }
 
-// // Search function
-// searchBar.addEventListener('input', function () {
-//     const query = searchBar.value.toLowerCase();
-//     const filteredPosts = posts.filter(post => post.title.toLowerCase().includes(query) || post.content.toLowerCase().includes(query));
-//     displayPosts(filteredPosts);
-// });
+
 
 // Initial display
 displayPosts();
