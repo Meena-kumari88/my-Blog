@@ -1,4 +1,4 @@
-/* Base Styles (Default for large screens) */
+
 .post {
     border: 2px solid teal;
     margin: 20px 0;
@@ -6,13 +6,13 @@
     border-radius: 5px;
     background: #fafafa;
     position: relative;
-    word-wrap: break-word; /* Ensure text wraps */
+    word-wrap: break-word; 
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .post:hover {
-    background-color: #e0f7fa; /* Light teal green color */
-    transform: translateY(-5px); /* Slightly raise the post */
+    background-color: #e0f7fa; 
+    transform: translateY(-5px); 
 }
 
 .post h3 {
@@ -54,22 +54,22 @@ button:hover {
     background: none;
     border: none;
     cursor: pointer;
-    color: transparent; /* Make the heart transparent by default */
+    color: transparent; 
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .like-button::before {
     content: '❤️';
-    color: #ccc; /* Light grey for unliked state */
+    color: #ccc; 
     transition: color 0.3s ease;
 }
 
 .like-button.liked::before {
-    color: red; /* Red for liked state */
+    color: red; 
 }
 
 .like-button.unliked::before {
-    color: #ccc; /* Light grey for unliked state */
+    color: #ccc; 
 }
 
 .like-button.liked {
@@ -118,7 +118,7 @@ button:hover {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 12px 16px;
     z-index: 1;
-    max-width: 200px; /* Limit width to prevent overflow */
+    max-width: 200px; 
 }
 
 .share-dropdown:hover .share-content {
@@ -143,7 +143,7 @@ button:hover {
     border: none;
     cursor: pointer;
     margin-right: 10px;
-    position: relative; /* Ensure picker is positioned relative to this button */
+    position: relative;
 }
 
 .emoji-picker {
@@ -155,9 +155,9 @@ button:hover {
     padding: 5px;
     border-radius: 5px;
     z-index: 10;
-    width: max-content; /* Adjust width to fit content */
-    max-height: 200px; /* Limit height to prevent overflow */
-    overflow-y: auto; /* Enable vertical scrolling if needed */
+    width: max-content; 
+    max-height: 200px; 
+    overflow-y: auto; 
 }
 
 .emoji-picker.show {
